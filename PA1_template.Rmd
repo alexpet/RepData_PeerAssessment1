@@ -99,7 +99,7 @@ ggplot(activity.hourly, aes(time, steps)) + geom_line() +
 2. The following 5-minute interval, on average accross all days in the dataset,
 contains the maximum number of steps.
 ```{r}
-activity.hourly[order(-activity.hourly$steps),][1,1]
+format(activity.hourly[order(-activity.hourly$steps),][1,1], "%H:%M")
 ```
 
 ## Imputing missing values

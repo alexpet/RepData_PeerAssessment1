@@ -178,11 +178,11 @@ ggplot(activity.hourly, aes(time, steps)) + geom_line() +
 contains the maximum number of steps.
 
 ```r
-activity.hourly[order(-activity.hourly$steps),][1,1]
+format(activity.hourly[order(-activity.hourly$steps),][1,1], "%H:%M")
 ```
 
 ```
-## [1] "2015-04-19 08:35:00 EDT"
+## [1] "08:35"
 ```
 
 ## Imputing missing values
